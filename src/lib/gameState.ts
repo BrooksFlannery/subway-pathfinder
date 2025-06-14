@@ -1,6 +1,6 @@
 // Game State Management for NYC Subway Pathfinding Game
 
-import { Station, MOCK_STATIONS, buildStationGraph, getRandomStationPair } from '@/data/stations';
+import { Station, MOCK_STATIONS, buildStationGraph, getRandomStationPair } from '../data/stations';
 
 export interface GameMove {
     stationId: string;
