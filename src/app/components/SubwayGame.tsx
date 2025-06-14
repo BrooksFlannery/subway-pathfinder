@@ -55,7 +55,7 @@ export default function SubwayGame() {
                     <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-lg shadow-sm">
                         <Trophy className="w-5 h-5 text-yellow-500" />
                         <span className="text-sm font-medium text-gray-700">
-                            You've reached your destination!
+                            You&apos;ve reached your destination!
                         </span>
                     </div>
                 </div>
