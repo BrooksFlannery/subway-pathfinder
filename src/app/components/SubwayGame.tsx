@@ -5,11 +5,10 @@ import { MapPin, Flag, Trophy, RotateCw } from 'lucide-react';
 
 interface SubwayGameProps {
     gameState: GameState;
-    onStationClick: (stationId: string) => void;
     onNewGame: () => void;
 }
 
-export default function SubwayGame({ gameState, onStationClick, onNewGame }: SubwayGameProps) {
+export default function SubwayGame({ gameState, onNewGame }: SubwayGameProps) {
     return (
         <div className="space-y-6">
             {/* Game Info */}

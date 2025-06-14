@@ -49,7 +49,6 @@ export default function Home() {
         <div className="w-1/3 p-6 overflow-y-auto border-r border-gray-200">
           <SubwayGame
             gameState={gameState}
-            onStationClick={handleStationClick}
             onNewGame={handleNewGame}
           />
         </div>
