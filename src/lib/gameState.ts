@@ -4,36 +4,25 @@ import { Station, MOCK_STATIONS, buildStationGraph, getRandomStationPair } from 
 
 export interface GameMove {
     stationId: string;
-    line: string;
     timestamp: number;
 }
 
 export interface GameState {
-    // Core game data
     startStation: Station;
     endStation: Station;
     currentStation: Station;
-
-    // User's path
     playerPath: GameMove[];
-
-    // Game status
-    gameStatus: 'playing' | 'won' | 'lost' | 'not-started';
+    gameStatus: 'not-started' | 'playing' | 'won' | 'lost';
     gameStartTime: number;
     gameEndTime?: number;
-
-    // Move validation
-    lastMove?: GameMove;
     availableMoves: Array<{
         station: Station;
-        line: string;
         travelTime: number;
     }>;
-
-    // Stats
     totalTravelTime: number;
     transferCount: number;
     moveCount: number;
+    lastMove?: GameMove;
 }
 
 export class SubwayGame {
@@ -42,25 +31,69 @@ export class SubwayGame {
 
     constructor() {
         this.stationGraph = buildStationGraph();
-        this.gameState = this.initializeGame();
-    }
-
-    // Initialize a new game
-    private initializeGame(): GameState {
         const { start, end } = getRandomStationPair();
+        console.log('Initializing game with stations:', {
+            start: start.name,
+            end: end.name
+        });
 
-        return {
+        // Initialize game state with all available moves from start
+        const initialMoves = this.calculateAvailableMoves(start);
+
+        this.gameState = {
             startStation: start,
             endStation: end,
             currentStation: start,
             playerPath: [],
             gameStatus: 'not-started',
             gameStartTime: 0,
-            availableMoves: this.getAvailableMoves(start),
+            availableMoves: initialMoves,
             totalTravelTime: 0,
             transferCount: 0,
-            moveCount: 0
+            moveCount: 0,
+            lastMove: undefined
         };
+    }
+
+    // Helper function to calculate available moves without accessing gameState
+    private calculateAvailableMoves(station: Station, previousStationId?: string): Array<{
+        station: Station;
+        travelTime: number;
+    }> {
+        const moves: Array<{
+            station: Station;
+            travelTime: number;
+        }> = [];
+
+        console.log('Calculating moves from:', station.name);
+        console.log('Station connections:', station.connections);
+
+        station.connections.forEach(connection => {
+            const connectedStation = this.stationGraph.get(connection.stationId);
+            if (connectedStation && (!previousStationId || connectedStation.id !== previousStationId)) {
+                moves.push({
+                    station: connectedStation,
+                    travelTime: connection.travelTime
+                });
+                console.log('Added move to:', connectedStation.name);
+            } else if (connectedStation) {
+                console.log('Skipping previous station:', connectedStation.name);
+            } else {
+                console.warn('Could not find connected station:', connection.stationId);
+            }
+        });
+
+        console.log('Available moves:', moves.map(m => m.station.name));
+        return moves;
+    }
+
+    // Get available moves from current station
+    private getAvailableMoves(station: Station): Array<{
+        station: Station;
+        travelTime: number;
+    }> {
+        const previousStationId = this.gameState.lastMove?.stationId;
+        return this.calculateAvailableMoves(station, previousStationId);
     }
 
     // Start a new game
@@ -75,34 +108,8 @@ export class SubwayGame {
         return { ...this.gameState };
     }
 
-    // Get available moves from current station
-    private getAvailableMoves(station: Station): Array<{
-        station: Station;
-        line: string;
-        travelTime: number;
-    }> {
-        const moves: Array<{
-            station: Station;
-            line: string;
-            travelTime: number;
-        }> = [];
-
-        station.neighbors.forEach(neighbor => {
-            const neighborStation = this.stationGraph.get(neighbor.stationId);
-            if (neighborStation) {
-                moves.push({
-                    station: neighborStation,
-                    line: neighbor.line,
-                    travelTime: neighbor.travelTime
-                });
-            }
-        });
-
-        return moves;
-    }
-
     // Make a move to another station
-    makeMove(targetStationId: string, line: string): {
+    makeMove(targetStationId: string): {
         success: boolean;
         message: string;
         gameState: GameState;
@@ -116,23 +123,44 @@ export class SubwayGame {
             };
         }
 
+        console.log('=== Move Attempt Details ===');
+        console.log('Target station ID:', targetStationId);
+        console.log('Current station:', {
+            id: this.gameState.currentStation.id,
+            name: this.gameState.currentStation.name
+        });
+        console.log('Available moves:', this.gameState.availableMoves.map(m => ({
+            id: m.station.id,
+            name: m.station.name,
+            travelTime: m.travelTime
+        })));
+
         // Validate the move
         const validMove = this.gameState.availableMoves.find(
-            move => move.station.id === targetStationId && move.line === line
+            move => move.station.id === targetStationId
         );
 
         if (!validMove) {
+            console.log('Move validation failed:', {
+                targetId: targetStationId,
+                availableIds: this.gameState.availableMoves.map(m => m.station.id)
+            });
             return {
                 success: false,
-                message: `Invalid move. You cannot travel from ${this.gameState.currentStation.name} to station ${targetStationId} via ${line} line.`,
+                message: `Invalid move. You cannot travel from ${this.gameState.currentStation.name} to station ${targetStationId}.`,
                 gameState: this.getGameState()
             };
         }
 
+        console.log('Move validated successfully:', {
+            from: this.gameState.currentStation.name,
+            to: validMove.station.name,
+            travelTime: validMove.travelTime
+        });
+
         // Execute the move
         const move: GameMove = {
             stationId: targetStationId,
-            line: line,
             timestamp: Date.now()
         };
 
@@ -143,14 +171,6 @@ export class SubwayGame {
         this.gameState.totalTravelTime += validMove.travelTime;
         this.gameState.moveCount++;
 
-        // Check for transfers (line change)
-        if (this.gameState.playerPath.length > 1) {
-            const previousMove = this.gameState.playerPath[this.gameState.playerPath.length - 2];
-            if (previousMove.line !== line) {
-                this.gameState.transferCount++;
-            }
-        }
-
         // Update available moves
         this.gameState.availableMoves = this.getAvailableMoves(this.gameState.currentStation);
 
@@ -160,9 +180,20 @@ export class SubwayGame {
             this.gameState.gameEndTime = Date.now();
         }
 
+        console.log('=== Move Complete ===');
+        console.log('New current station:', {
+            id: this.gameState.currentStation.id,
+            name: this.gameState.currentStation.name
+        });
+        console.log('New available moves:', this.gameState.availableMoves.map(m => ({
+            id: m.station.id,
+            name: m.station.name,
+            travelTime: m.travelTime
+        })));
+
         return {
             success: true,
-            message: `Moved to ${validMove.station.name} via ${line} line`,
+            message: `Moved to ${validMove.station.name}`,
             gameState: this.getGameState()
         };
     }
@@ -178,9 +209,7 @@ export class SubwayGame {
         this.gameState.playerPath.forEach((move, index) => {
             const station = this.stationGraph.get(move.stationId);
             if (station) {
-                const isTransfer = index > 0 && this.gameState.playerPath[index - 1].line !== move.line;
-                const transferText = isTransfer ? ' (TRANSFER)' : '';
-                descriptions.push(`${index + 1}. ${station.name} via ${move.line} line${transferText}`);
+                descriptions.push(`${index + 1}. ${station.name}`);
             }
         });
 
@@ -209,7 +238,29 @@ export class SubwayGame {
 
     // Reset game with new random stations
     newGame(): GameState {
-        this.gameState = this.initializeGame();
+        const { start, end } = getRandomStationPair();
+        console.log('Initializing game with stations:', {
+            start: start.name,
+            end: end.name
+        });
+
+        // Initialize game state with all available moves from start
+        const initialMoves = this.calculateAvailableMoves(start);
+
+        this.gameState = {
+            startStation: start,
+            endStation: end,
+            currentStation: start,
+            playerPath: [],
+            gameStatus: 'not-started',
+            gameStartTime: 0,
+            availableMoves: initialMoves,
+            totalTravelTime: 0,
+            transferCount: 0,
+            moveCount: 0,
+            lastMove: undefined
+        };
+
         return this.startGame();
     }
 
@@ -234,16 +285,16 @@ export class SubwayGame {
     }
 
     // Validate if a move is legal (without executing it)
-    isValidMove(targetStationId: string, line: string): boolean {
+    isValidMove(targetStationId: string): boolean {
         return this.gameState.availableMoves.some(
-            move => move.station.id === targetStationId && move.line === line
+            move => move.station.id === targetStationId
         );
     }
 
     // Get hint: show all valid next moves
     getHint(): string[] {
         return this.gameState.availableMoves.map(move =>
-            `${move.station.name} via ${move.line} line (${move.travelTime} min)`
+            `${move.station.name} (${move.travelTime} min)`
         );
     }
 

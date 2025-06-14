@@ -1,13 +1,11 @@
-import SubwayMap from './components/SubwayMap';
+import SubwayGame from './components/SubwayGame';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="w-full max-w-5xl">
-        <h1 className="text-4xl font-bold mb-8 text-center">NYC Subway Map</h1>
-        <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-lg overflow-hidden">
-          <SubwayMap />
-        </div>
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">NYC Subway Pathfinder</h1>
+        <SubwayGame />
       </div>
     </main>
   );
