@@ -9,33 +9,6 @@ interface SubwayMapProps {
 }
 
 export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps) {
-    // Calculate bounds for scaling
-    const bounds = MOCK_STATIONS.reduce((acc, station) => ({
-        minLat: Math.min(acc.minLat, station.coordinates.lat),
-        maxLat: Math.max(acc.maxLat, station.coordinates.lat),
-        minLng: Math.min(acc.minLng, station.coordinates.lng),
-        maxLng: Math.max(acc.maxLng, station.coordinates.lng),
-    }), {
-        minLat: Infinity,
-        maxLat: -Infinity,
-        minLng: Infinity,
-        maxLng: -Infinity,
-    });
-
-    // Add padding
-    const padding = 0.01;
-    bounds.minLat -= padding;
-    bounds.maxLat += padding;
-    bounds.minLng -= padding;
-    bounds.maxLng += padding;
-
-    // Convert coordinates to SVG coordinates (0-1000 range)
-    const toSvgCoords = (lat: number, lng: number) => {
-        const x = ((lng - bounds.minLng) / (bounds.maxLng - bounds.minLng)) * 1000;
-        const y = ((lat - bounds.minLat) / (bounds.maxLat - bounds.minLat)) * 1000;
-        return { x, y };
-    };
-
     return (
         <div className="w-full h-full">
             <svg
@@ -48,16 +21,13 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
                         const connectedStation = MOCK_STATIONS.find(s => s.id === connection.stationId);
                         if (!connectedStation || station.id >= connectedStation.id) return null;
 
-                        const start = toSvgCoords(station.coordinates.lat, station.coordinates.lng);
-                        const end = toSvgCoords(connectedStation.coordinates.lat, connectedStation.coordinates.lng);
-
                         return (
                             <line
                                 key={`${station.id}-${connection.stationId}`}
-                                x1={start.x}
-                                y1={start.y}
-                                x2={end.x}
-                                y2={end.y}
+                                x1={station.coordinates.x}
+                                y1={station.coordinates.y}
+                                x2={connectedStation.coordinates.x}
+                                y2={connectedStation.coordinates.y}
                                 stroke="#94a3b8"
                                 strokeWidth="3"
                                 strokeLinecap="round"
@@ -68,7 +38,6 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
 
                 {/* Draw stations */}
                 {MOCK_STATIONS.map(station => {
-                    const pos = toSvgCoords(station.coordinates.lat, station.coordinates.lng);
                     const isCurrent = station.id === gameState.currentStation.id;
                     const isAvailable = gameState.availableMoves.some(move => move.station.id === station.id);
                     const isStart = station.id === gameState.startStation.id;
@@ -85,8 +54,8 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
                             style={{ cursor: isAvailable ? 'pointer' : 'default' }}
                         >
                             <circle
-                                cx={pos.x}
-                                cy={pos.y}
+                                cx={station.coordinates.x}
+                                cy={station.coordinates.y}
                                 r={isCurrent ? 14 : 10}
                                 fill={isStart ? '#3b82f6' : isEnd ? '#22c55e' : isCurrent ? '#fff' : '#e2e8f0'}
                                 stroke={isStart ? '#2563eb' : isEnd ? '#16a34a' : isCurrent ? '#0f172a' : '#94a3b8'}
@@ -94,8 +63,8 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
                                 className="transition-all duration-200"
                             />
                             <text
-                                x={pos.x}
-                                y={pos.y + 22}
+                                x={station.coordinates.x}
+                                y={station.coordinates.y + 22}
                                 textAnchor="middle"
                                 fill="#334155"
                                 fontSize="12"
