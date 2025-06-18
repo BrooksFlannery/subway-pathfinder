@@ -1,10 +1,11 @@
-import { Station } from '../types/station';
+// import { Station } from '../types/station';
 
-export const MOCK_STATIONS: Station[] = [
+// export const MOCK_STATIONS: Station[] = 
+[
     {
         id: "Middle Village-Metropolitan Av",
         name: "Middle Village-Metropolitan Av",
-        borough: "Queens",
+        // borough: "Queens",
         coordinates: { x: 500, y: 300 },
         connections: [
             { stationId: "Fresh Pond Rd", travelTime: 3 },

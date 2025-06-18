@@ -3,4 +3,4 @@
 
 export * from '../types/station';
 export * from '../lib/stationUtils';
-export { MOCK_STATIONS } from './mockStations'; 
+export { REAL_STATIONS } from './realStations';

@@ -1,10 +1,10 @@
 import { Station } from '../types/station';
-import { MOCK_STATIONS } from '../data/mockStations';
+import { REAL_STATIONS } from '../data/realStations';
 
 // Helper function to build station graph
 export function buildStationGraph(): Map<string, Station> {
     const stationMap = new Map<string, Station>();
-    MOCK_STATIONS.forEach((station: Station) => {
+    REAL_STATIONS.forEach((station: Station) => {
         stationMap.set(station.id, station);
     });
     return stationMap;
@@ -12,7 +12,7 @@ export function buildStationGraph(): Map<string, Station> {
 
 // Helper function to get random start/end pair
 export function getRandomStationPair(): { start: Station; end: Station } {
-    const stations = MOCK_STATIONS;
+    const stations = REAL_STATIONS;
     const start = stations[Math.floor(Math.random() * stations.length)];
     let end = stations[Math.floor(Math.random() * stations.length)];
 
@@ -24,7 +24,7 @@ export function getRandomStationPair(): { start: Station; end: Station } {
     return { start, end };
 }
 
-// Get stations by borough
-export function getStationsByBorough(borough: "Queens" | "Brooklyn" | "Manhattan" | "Staten Island" | "Bronx"): Station[] {
-    return MOCK_STATIONS.filter((station: Station) => station.borough === borough);
-} 
+// // Get stations by borough
+// export function getStationsByBorough(borough: "Queens" | "Brooklyn" | "Manhattan" | "Staten Island" | "Bronx"): Station[] {
+//     return REAL_STATIONS.filter((station: Station) => station.borough === borough);
+// } 

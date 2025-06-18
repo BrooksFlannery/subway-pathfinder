@@ -1,6 +1,6 @@
 'use client';
 
-import { MOCK_STATIONS } from '@/data/stations';
+import { REAL_STATIONS } from '@/data/stations';
 import { GameState } from '@/lib/gameState';
 
 interface SubwayMapProps {
@@ -16,9 +16,9 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
                 className="w-full h-full"
             >
                 {/* Draw connections */}
-                {MOCK_STATIONS.map(station =>
+                {REAL_STATIONS.map(station =>
                     station.connections.map(connection => {
-                        const connectedStation = MOCK_STATIONS.find(s => s.id === connection.stationId);
+                        const connectedStation = REAL_STATIONS.find(s => s.id === connection.stationId);
                         if (!connectedStation || station.id >= connectedStation.id) return null;
 
                         return (
@@ -37,7 +37,7 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
                 )}
 
                 {/* Draw stations */}
-                {MOCK_STATIONS.map(station => {
+                {REAL_STATIONS.map(station => {
                     const isCurrent = station.id === gameState.currentStation.id;
                     const isAvailable = gameState.availableMoves.some(move => move.station.id === station.id);
                     const isStart = station.id === gameState.startStation.id;
