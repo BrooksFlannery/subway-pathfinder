@@ -17,6 +17,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-271",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-271",
+            "station-272"
         ]
     },
     {
@@ -35,6 +39,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-504",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-3",
+            "station-4",
+            "station-5",
+            "station-6",
+            "station-7",
+            "station-794"
         ]
     },
     {
@@ -53,6 +65,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-511",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-2",
+            "station-3",
+            "station-4",
+            "station-5",
+            "station-6",
+            "station-794"
         ]
     },
     {
@@ -89,6 +109,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-656",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-705"
         ]
     },
     {
@@ -107,6 +130,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-363",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-77"
         ]
     },
     {
@@ -143,6 +169,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-256",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-75"
         ]
     },
     {
@@ -179,6 +208,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-348",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-80",
+            "station-357"
         ]
     },
     {
@@ -197,6 +230,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-82",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-79",
+            "station-357"
         ]
     },
     {
@@ -215,6 +252,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-291",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-82",
+            "station-355"
         ]
     },
     {
@@ -233,6 +274,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-290",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-81",
+            "station-355"
         ]
     },
     {
@@ -251,6 +296,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-138",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-84"
         ]
     },
     {
@@ -269,6 +317,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-203",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-83"
         ]
     },
     {
@@ -305,6 +356,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-158",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-98",
+            "station-99",
+            "station-100",
+            "station-101",
+            "station-103",
+            "station-104",
+            "station-806"
         ]
     },
     {
@@ -341,6 +401,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-150",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-97",
+            "station-98",
+            "station-99",
+            "station-100",
+            "station-101",
+            "station-104",
+            "station-806"
         ]
     },
     {
@@ -359,6 +428,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-536",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-97",
+            "station-98",
+            "station-99",
+            "station-100",
+            "station-101",
+            "station-103",
+            "station-806"
         ]
     },
     {
@@ -377,6 +455,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-404",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-114",
+            "station-116"
         ]
     },
     {
@@ -395,6 +477,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-403",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-113",
+            "station-116"
         ]
     },
     {
@@ -413,6 +499,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-263",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-117",
+            "station-118"
         ]
     },
     {
@@ -431,6 +521,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-262",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-113",
+            "station-114"
         ]
     },
     {
@@ -445,6 +539,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-286",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-115",
+            "station-118"
         ]
     },
     {
@@ -454,7 +552,11 @@ export const REAL_STATIONS: Station[] = [
             "x": 377.87,
             "y": 1221.096
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-115",
+            "station-117"
+        ]
     },
     {
         "id": "station-119",
@@ -486,6 +588,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-158",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-121",
+            "station-122",
+            "station-123",
+            "station-124",
+            "station-127",
+            "station-804"
         ]
     },
     {
@@ -504,6 +614,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-154",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-126"
         ]
     },
     {
@@ -522,6 +635,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-103",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-125"
         ]
     },
     {
@@ -540,6 +656,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-163",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-120",
+            "station-121",
+            "station-122",
+            "station-123",
+            "station-124",
+            "station-804"
         ]
     },
     {
@@ -554,6 +678,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-157",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-129"
         ]
     },
     {
@@ -572,6 +699,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-126",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-128"
         ]
     },
     {
@@ -608,6 +738,16 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-84",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-132",
+            "station-133",
+            "station-134",
+            "station-135",
+            "station-136",
+            "station-137",
+            "station-138",
+            "station-788"
         ]
     },
     {
@@ -626,6 +766,16 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-266",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-131",
+            "station-132",
+            "station-133",
+            "station-134",
+            "station-135",
+            "station-137",
+            "station-138",
+            "station-788"
         ]
     },
     {
@@ -644,6 +794,16 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-414",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-131",
+            "station-132",
+            "station-133",
+            "station-134",
+            "station-135",
+            "station-136",
+            "station-138",
+            "station-788"
         ]
     },
     {
@@ -662,6 +822,16 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-139",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-131",
+            "station-132",
+            "station-133",
+            "station-134",
+            "station-135",
+            "station-136",
+            "station-137",
+            "station-788"
         ]
     },
     {
@@ -680,6 +850,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-663",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-140",
+            "station-141",
+            "station-142",
+            "station-143",
+            "station-146"
         ]
     },
     {
@@ -698,6 +875,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-131",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-145"
         ]
     },
     {
@@ -712,6 +892,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-473",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-144"
         ]
     },
     {
@@ -726,6 +909,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-474",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-139",
+            "station-140",
+            "station-141",
+            "station-142",
+            "station-143"
         ]
     },
     {
@@ -744,6 +934,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-330",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-148"
         ]
     },
     {
@@ -762,6 +955,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-270",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-147"
         ]
     },
     {
@@ -798,6 +994,12 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-259",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-151",
+            "station-152",
+            "station-153",
+            "station-803"
         ]
     },
     {
@@ -812,6 +1014,12 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-523",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-150",
+            "station-152",
+            "station-153",
+            "station-803"
         ]
     },
     {
@@ -830,6 +1038,12 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-381",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-150",
+            "station-151",
+            "station-153",
+            "station-803"
         ]
     },
     {
@@ -848,6 +1062,12 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-102",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-150",
+            "station-151",
+            "station-152",
+            "station-803"
         ]
     },
     {
@@ -866,6 +1086,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-386",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-155"
         ]
     },
     {
@@ -880,6 +1103,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-387",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-154"
         ]
     },
     {
@@ -934,6 +1160,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-120",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-159",
+            "station-160",
+            "station-161",
+            "station-162",
+            "station-163",
+            "station-805"
         ]
     },
     {
@@ -952,6 +1186,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-104",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-158",
+            "station-159",
+            "station-160",
+            "station-161",
+            "station-162",
+            "station-805"
         ]
     },
     {
@@ -970,6 +1212,16 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-136",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-165",
+            "station-166",
+            "station-167",
+            "station-168",
+            "station-169",
+            "station-170",
+            "station-171",
+            "station-787"
         ]
     },
     {
@@ -988,6 +1240,16 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-178",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-164",
+            "station-165",
+            "station-166",
+            "station-167",
+            "station-168",
+            "station-170",
+            "station-171",
+            "station-787"
         ]
     },
     {
@@ -1006,6 +1268,16 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-197",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-164",
+            "station-165",
+            "station-166",
+            "station-167",
+            "station-168",
+            "station-169",
+            "station-171",
+            "station-787"
         ]
     },
     {
@@ -1024,6 +1296,16 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-137",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-164",
+            "station-165",
+            "station-166",
+            "station-167",
+            "station-168",
+            "station-169",
+            "station-170",
+            "station-787"
         ]
     },
     {
@@ -1042,6 +1324,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-164",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-173",
+            "station-174",
+            "station-175",
+            "station-176",
+            "station-177",
+            "station-789"
         ]
     },
     {
@@ -1060,6 +1350,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-171",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-172",
+            "station-173",
+            "station-174",
+            "station-175",
+            "station-176",
+            "station-789"
         ]
     },
     {
@@ -1114,6 +1412,12 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-393",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-181",
+            "station-182",
+            "station-183",
+            "station-184"
         ]
     },
     {
@@ -1132,6 +1436,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-190",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-186",
+            "station-187"
         ]
     },
     {
@@ -1150,6 +1458,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-929",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-185",
+            "station-187"
         ]
     },
     {
@@ -1168,6 +1480,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-188",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-185",
+            "station-186"
         ]
     },
     {
@@ -1186,6 +1502,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-720",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-189",
+            "station-190"
         ]
     },
     {
@@ -1204,6 +1524,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-770",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-188",
+            "station-190"
         ]
     },
     {
@@ -1222,6 +1546,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-708",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-188",
+            "station-189"
         ]
     },
     {
@@ -1240,6 +1568,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-395",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-192",
+            "station-193",
+            "station-194"
         ]
     },
     {
@@ -1258,6 +1591,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-79",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-191",
+            "station-193",
+            "station-194"
         ]
     },
     {
@@ -1276,6 +1614,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-80",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-191",
+            "station-192",
+            "station-194"
         ]
     },
     {
@@ -1294,6 +1637,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-397",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-191",
+            "station-192",
+            "station-193"
         ]
     },
     {
@@ -1330,6 +1678,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-169",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-197"
         ]
     },
     {
@@ -1348,6 +1699,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-204",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-196"
         ]
     },
     {
@@ -1366,6 +1720,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-195",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-199",
+            "station-200",
+            "station-201",
+            "station-202",
+            "station-203",
+            "station-204",
+            "station-205"
         ]
     },
     {
@@ -1384,6 +1747,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-267",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-198",
+            "station-199",
+            "station-200",
+            "station-201",
+            "station-202",
+            "station-204",
+            "station-205"
         ]
     },
     {
@@ -1402,6 +1774,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-324",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-198",
+            "station-199",
+            "station-200",
+            "station-201",
+            "station-202",
+            "station-203",
+            "station-205"
         ]
     },
     {
@@ -1420,6 +1801,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-83",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-198",
+            "station-199",
+            "station-200",
+            "station-201",
+            "station-202",
+            "station-203",
+            "station-204"
         ]
     },
     {
@@ -1542,6 +1932,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-635",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-213",
+            "station-214"
         ]
     },
     {
@@ -1560,6 +1954,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-636",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-212",
+            "station-214"
         ]
     },
     {
@@ -1578,6 +1976,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-637",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-212",
+            "station-213"
         ]
     },
     {
@@ -1596,6 +1998,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-240",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-216",
+            "station-219"
         ]
     },
     {
@@ -1614,6 +2020,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-225",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-215",
+            "station-219"
         ]
     },
     {
@@ -1632,6 +2042,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-226",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-218"
         ]
     },
     {
@@ -1650,6 +2063,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-227",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-217"
         ]
     },
     {
@@ -1668,6 +2084,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-244",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-215",
+            "station-216"
         ]
     },
     {
@@ -1704,6 +2124,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-219",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-222",
+            "station-224"
         ]
     },
     {
@@ -1722,6 +2146,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-214",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-221",
+            "station-224"
         ]
     },
     {
@@ -1754,6 +2182,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-212",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-221",
+            "station-222"
         ]
     },
     {
@@ -1772,6 +2204,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-228",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-226",
+            "station-227"
         ]
     },
     {
@@ -1790,6 +2226,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-229",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-225",
+            "station-227"
         ]
     },
     {
@@ -1808,6 +2248,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-230",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-225",
+            "station-226"
         ]
     },
     {
@@ -1826,6 +2270,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-231",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-229",
+            "station-230"
         ]
     },
     {
@@ -1844,6 +2292,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-232",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-228",
+            "station-230"
         ]
     },
     {
@@ -1862,6 +2314,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-233",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-228",
+            "station-229"
         ]
     },
     {
@@ -1880,6 +2336,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-234",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-232",
+            "station-233"
         ]
     },
     {
@@ -1898,6 +2358,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-235",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-231",
+            "station-233"
         ]
     },
     {
@@ -1916,6 +2380,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-236",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-231",
+            "station-232"
         ]
     },
     {
@@ -1934,6 +2402,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-237",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-235",
+            "station-236"
         ]
     },
     {
@@ -1952,6 +2424,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-238",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-234",
+            "station-236"
         ]
     },
     {
@@ -1970,6 +2446,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-239",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-234",
+            "station-235"
         ]
     },
     {
@@ -1988,6 +2468,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-241",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-238",
+            "station-239"
         ]
     },
     {
@@ -2006,6 +2490,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-242",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-237",
+            "station-239"
         ]
     },
     {
@@ -2024,6 +2512,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-243",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-237",
+            "station-238"
         ]
     },
     {
@@ -2042,6 +2534,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-736",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-241",
+            "station-244"
         ]
     },
     {
@@ -2056,6 +2552,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-237",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-240",
+            "station-244"
         ]
     },
     {
@@ -2070,6 +2570,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-238",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-243"
         ]
     },
     {
@@ -2084,6 +2587,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-239",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-242"
         ]
     },
     {
@@ -2102,6 +2608,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-734",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-240",
+            "station-241"
         ]
     },
     {
@@ -2138,6 +2648,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-490",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-247",
+            "station-791"
         ]
     },
     {
@@ -2156,6 +2670,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-492",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-246",
+            "station-791"
         ]
     },
     {
@@ -2174,6 +2692,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-2",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-249",
+            "station-250",
+            "station-251",
+            "station-252",
+            "station-253",
+            "station-795"
         ]
     },
     {
@@ -2188,6 +2714,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-7",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-248",
+            "station-249",
+            "station-250",
+            "station-251",
+            "station-252",
+            "station-795"
         ]
     },
     {
@@ -2224,6 +2758,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-257",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-256"
         ]
     },
     {
@@ -2242,6 +2779,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-258",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-255"
         ]
     },
     {
@@ -2260,6 +2800,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-361",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-258"
         ]
     },
     {
@@ -2278,6 +2821,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-362",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-257"
         ]
     },
     {
@@ -2296,6 +2842,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-406",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-260"
         ]
     },
     {
@@ -2314,6 +2863,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-405",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-259"
         ]
     },
     {
@@ -2332,6 +2884,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-289",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-262"
         ]
     },
     {
@@ -2346,6 +2901,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-116",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-261"
         ]
     },
     {
@@ -2400,6 +2958,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-415",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-266"
         ]
     },
     {
@@ -2418,6 +2979,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-75",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-265"
         ]
     },
     {
@@ -2436,6 +3000,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-372",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-268",
+            "station-924"
         ]
     },
     {
@@ -2445,7 +3013,11 @@ export const REAL_STATIONS: Station[] = [
             "x": 529.25,
             "y": 1886.999
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-267",
+            "station-924"
+        ]
     },
     {
         "id": "station-269",
@@ -2495,6 +3067,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-333",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-1",
+            "station-272"
         ]
     },
     {
@@ -2513,6 +3089,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-332",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-1",
+            "station-271"
         ]
     },
     {
@@ -2540,6 +3120,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-78",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-275",
+            "station-276"
         ]
     },
     {
@@ -2558,6 +3142,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-194",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-274",
+            "station-276"
         ]
     },
     {
@@ -2580,6 +3168,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-191",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-274",
+            "station-275"
         ]
     },
     {
@@ -2589,7 +3181,10 @@ export const REAL_STATIONS: Station[] = [
             "x": 704.667,
             "y": 1517.669
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-278"
+        ]
     },
     {
         "id": "station-278",
@@ -2607,6 +3202,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-408",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-277"
         ]
     },
     {
@@ -2643,6 +3241,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-385",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-281"
         ]
     },
     {
@@ -2657,6 +3258,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-283",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-280"
         ]
     },
     {
@@ -2675,6 +3279,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-826",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-283"
         ]
     },
     {
@@ -2693,6 +3300,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-281",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-282"
         ]
     },
     {
@@ -2711,6 +3321,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-818",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-285"
         ]
     },
     {
@@ -2729,6 +3342,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-827",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-284"
         ]
     },
     {
@@ -2761,6 +3377,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-373",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-288"
         ]
     },
     {
@@ -2779,6 +3398,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-374",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-287"
         ]
     },
     {
@@ -2815,6 +3437,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-383",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-291"
         ]
     },
     {
@@ -2833,6 +3458,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-384",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-290"
         ]
     },
     {
@@ -2851,6 +3479,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-153",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-293"
         ]
     },
     {
@@ -2869,6 +3500,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-288",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-292"
         ]
     },
     {
@@ -2923,6 +3557,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-76",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-297"
         ]
     },
     {
@@ -2941,6 +3578,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-77",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-296"
         ]
     },
     {
@@ -2955,6 +3595,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-296",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-299"
         ]
     },
     {
@@ -2973,6 +3616,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-297",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-298"
         ]
     },
     {
@@ -2991,6 +3637,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-773",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-301"
         ]
     },
     {
@@ -3009,6 +3658,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-379",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-300"
         ]
     },
     {
@@ -3041,6 +3693,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-301",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-304"
         ]
     },
     {
@@ -3059,6 +3714,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-309",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-303"
         ]
     },
     {
@@ -3077,6 +3735,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-303",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-306"
         ]
     },
     {
@@ -3095,6 +3756,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-314",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-305"
         ]
     },
     {
@@ -3185,6 +3849,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-305",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-312"
         ]
     },
     {
@@ -3203,6 +3870,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-315",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-311"
         ]
     },
     {
@@ -3271,6 +3941,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-311",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-317"
         ]
     },
     {
@@ -3285,6 +3958,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-312",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-316"
         ]
     },
     {
@@ -3303,6 +3979,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-376",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-319",
+            "station-320",
+            "station-321"
         ]
     },
     {
@@ -3321,6 +4002,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-375",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-318",
+            "station-320",
+            "station-321"
         ]
     },
     {
@@ -3330,7 +4016,12 @@ export const REAL_STATIONS: Station[] = [
             "x": 592,
             "y": 1221.096
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-318",
+            "station-319",
+            "station-321"
+        ]
     },
     {
         "id": "station-321",
@@ -3348,6 +4039,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-286",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-318",
+            "station-319",
+            "station-320"
         ]
     },
     {
@@ -3366,6 +4062,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-318",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-323"
         ]
     },
     {
@@ -3384,6 +4083,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-350",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-322"
         ]
     },
     {
@@ -3402,6 +4104,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-329",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-325"
         ]
     },
     {
@@ -3416,6 +4121,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-329",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-324"
         ]
     },
     {
@@ -3528,6 +4236,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-130",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-333"
         ]
     },
     {
@@ -3546,6 +4257,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-1750229112180",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-332"
         ]
     },
     {
@@ -3582,6 +4296,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-222",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-336"
         ]
     },
     {
@@ -3600,6 +4317,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-221",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-335"
         ]
     },
     {
@@ -3632,6 +4352,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-265",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-339"
         ]
     },
     {
@@ -3650,6 +4373,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-322",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-338"
         ]
     },
     {
@@ -3668,6 +4394,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-148",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-341",
+            "station-342",
+            "station-343",
+            "station-344",
+            "station-345"
         ]
     },
     {
@@ -3686,6 +4419,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-401",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-340",
+            "station-342",
+            "station-343",
+            "station-344",
+            "station-345"
         ]
     },
     {
@@ -3704,6 +4444,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-341",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-347"
         ]
     },
     {
@@ -3722,6 +4465,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-346",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-346"
         ]
     },
     {
@@ -3740,6 +4486,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-81",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-356"
         ]
     },
     {
@@ -3857,7 +4606,11 @@ export const REAL_STATIONS: Station[] = [
             "x": 443.343,
             "y": 1292.908
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-81",
+            "station-82"
+        ]
     },
     {
         "id": "station-356",
@@ -3866,7 +4619,10 @@ export const REAL_STATIONS: Station[] = [
             "x": 443.343,
             "y": 1368.5
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-348"
+        ]
     },
     {
         "id": "station-357",
@@ -3875,7 +4631,11 @@ export const REAL_STATIONS: Station[] = [
             "x": 443.343,
             "y": 1409.667
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-79",
+            "station-80"
+        ]
     },
     {
         "id": "station-361",
@@ -3889,6 +4649,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-257",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-362",
+            "station-363"
         ]
     },
     {
@@ -3907,6 +4671,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-115",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-361",
+            "station-363"
         ]
     },
     {
@@ -3925,6 +4693,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-116",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-361",
+            "station-362"
         ]
     },
     {
@@ -4043,6 +4815,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-335",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-374"
         ]
     },
     {
@@ -4061,6 +4836,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-336",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-373"
         ]
     },
     {
@@ -4097,6 +4875,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-545",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-377"
         ]
     },
     {
@@ -4115,6 +4896,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-537",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-376"
         ]
     },
     {
@@ -4227,6 +5011,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-292",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-384"
         ]
     },
     {
@@ -4245,6 +5032,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-294",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-383"
         ]
     },
     {
@@ -4281,6 +5071,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-597",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-387"
         ]
     },
     {
@@ -4299,6 +5092,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-592",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-386"
         ]
     },
     {
@@ -4353,7 +5149,10 @@ export const REAL_STATIONS: Station[] = [
             "x": 1271.002,
             "y": 1979.5
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-392"
+        ]
     },
     {
         "id": "station-392",
@@ -4371,6 +5170,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-170",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-391"
         ]
     },
     {
@@ -4416,6 +5218,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-1",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-396"
         ]
     },
     {
@@ -4434,6 +5239,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-272",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-395"
         ]
     },
     {
@@ -4560,6 +5368,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-340",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-404"
         ]
     },
     {
@@ -4578,6 +5389,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-402",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-403"
         ]
     },
     {
@@ -4596,6 +5410,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-349",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-406"
         ]
     },
     {
@@ -4614,6 +5431,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-275",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-405"
         ]
     },
     {
@@ -4650,6 +5470,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-192",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-409"
         ]
     },
     {
@@ -4668,6 +5491,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-193",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-408"
         ]
     },
     {
@@ -4686,6 +5512,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-413",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-411"
         ]
     },
     {
@@ -4695,7 +5524,10 @@ export const REAL_STATIONS: Station[] = [
             "x": 605.123,
             "y": 1487.75
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-410"
+        ]
     },
     {
         "id": "station-412",
@@ -4713,6 +5545,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-714",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-650"
         ]
     },
     {
@@ -4785,6 +5620,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-189",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-417"
         ]
     },
     {
@@ -4803,6 +5641,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-186",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-416"
         ]
     },
     {
@@ -4821,6 +5662,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-416",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-419"
         ]
     },
     {
@@ -4839,6 +5683,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-417",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-418"
         ]
     },
     {
@@ -4857,6 +5704,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-419",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-421"
         ]
     },
     {
@@ -4875,6 +5725,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-418",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-420"
         ]
     },
     {
@@ -4893,6 +5746,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-420",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-423"
         ]
     },
     {
@@ -4911,6 +5767,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-421",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-422"
         ]
     },
     {
@@ -4965,6 +5824,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-422",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-427"
         ]
     },
     {
@@ -4983,6 +5845,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-423",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-426"
         ]
     },
     {
@@ -5001,6 +5866,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-426",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-429"
         ]
     },
     {
@@ -5019,6 +5887,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-427",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-428"
         ]
     },
     {
@@ -5037,6 +5908,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-428",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-431"
         ]
     },
     {
@@ -5055,6 +5929,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-429",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-430"
         ]
     },
     {
@@ -5073,6 +5950,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-430",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-433"
         ]
     },
     {
@@ -5087,6 +5967,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-431",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-432"
         ]
     },
     {
@@ -5105,6 +5988,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-206",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-435"
         ]
     },
     {
@@ -5119,6 +6005,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-437",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-434"
         ]
     },
     {
@@ -5133,6 +6022,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-438",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-437"
         ]
     },
     {
@@ -5151,6 +6043,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-435",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-436"
         ]
     },
     {
@@ -5169,6 +6064,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-436",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-439"
         ]
     },
     {
@@ -5187,6 +6085,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-437",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-438"
         ]
     },
     {
@@ -5205,6 +6106,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-438",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-441"
         ]
     },
     {
@@ -5223,6 +6127,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-439",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-440"
         ]
     },
     {
@@ -5237,6 +6144,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-440",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-443"
         ]
     },
     {
@@ -5251,6 +6161,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-441",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-442"
         ]
     },
     {
@@ -5269,6 +6182,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-1750253458792",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-445"
         ]
     },
     {
@@ -5287,6 +6203,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-1750239900592",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-444"
         ]
     },
     {
@@ -5301,6 +6220,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-445",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-447",
+            "station-448",
+            "station-449"
         ]
     },
     {
@@ -5315,6 +6239,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-1750243469164",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-446",
+            "station-448",
+            "station-449"
         ]
     },
     {
@@ -5329,6 +6258,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-444",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-446",
+            "station-447",
+            "station-449"
         ]
     },
     {
@@ -5343,6 +6277,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-1750237202447",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-446",
+            "station-447",
+            "station-448"
         ]
     },
     {
@@ -5379,6 +6318,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-1750237322073",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-452",
+            "station-453",
+            "station-454",
+            "station-455",
+            "station-456"
         ]
     },
     {
@@ -5397,6 +6343,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-466",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-451",
+            "station-452",
+            "station-453",
+            "station-454",
+            "station-455"
         ]
     },
     {
@@ -5595,6 +6548,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-451",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-468",
+            "station-469",
+            "station-470",
+            "station-471",
+            "station-474"
         ]
     },
     {
@@ -5613,6 +6573,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-482",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-473"
         ]
     },
     {
@@ -5631,6 +6594,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-476",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-472"
         ]
     },
     {
@@ -5649,6 +6615,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-456",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-467",
+            "station-468",
+            "station-469",
+            "station-470",
+            "station-471"
         ]
     },
     {
@@ -5667,6 +6640,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-479",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-476"
         ]
     },
     {
@@ -5685,6 +6661,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-478",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-475"
         ]
     },
     {
@@ -5847,6 +6826,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-172",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-486",
+            "station-487",
+            "station-488",
+            "station-489",
+            "station-490",
+            "station-491",
+            "station-790"
         ]
     },
     {
@@ -5865,6 +6853,15 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-177",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-485",
+            "station-486",
+            "station-487",
+            "station-488",
+            "station-489",
+            "station-491",
+            "station-790"
         ]
     },
     {
@@ -5874,7 +6871,16 @@ export const REAL_STATIONS: Station[] = [
             "x": 1271.002,
             "y": 2130.5
         },
-        "connections": []
+        "connections": [],
+        "walkable": [
+            "station-485",
+            "station-486",
+            "station-487",
+            "station-488",
+            "station-489",
+            "station-490",
+            "station-790"
+        ]
     },
     {
         "id": "station-492",
@@ -5946,6 +6952,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-494",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-496",
+            "station-497",
+            "station-498",
+            "station-499",
+            "station-500",
+            "station-792"
         ]
     },
     {
@@ -5964,6 +6978,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-246",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-495",
+            "station-496",
+            "station-497",
+            "station-498",
+            "station-499",
+            "station-792"
         ]
     },
     {
@@ -6072,6 +7094,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-501",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-507",
+            "station-508",
+            "station-509",
+            "station-510",
+            "station-511",
+            "station-793"
         ]
     },
     {
@@ -6090,6 +7120,14 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-500",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-506",
+            "station-507",
+            "station-508",
+            "station-509",
+            "station-510",
+            "station-793"
         ]
     },
     {
@@ -6306,6 +7344,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-525",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-524",
+            "station-798"
         ]
     },
     {
@@ -6324,6 +7366,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-152",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-523",
+            "station-798"
         ]
     },
     {
@@ -6342,6 +7388,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-527",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-526",
+            "station-799"
         ]
     },
     {
@@ -6360,6 +7410,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-524",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-525",
+            "station-799"
         ]
     },
     {
@@ -6378,6 +7432,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-529",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-528",
+            "station-800"
         ]
     },
     {
@@ -6396,6 +7454,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-526",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-527",
+            "station-800"
         ]
     },
     {
@@ -6414,6 +7476,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-531",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-530",
+            "station-797"
         ]
     },
     {
@@ -6432,6 +7498,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-528",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-529",
+            "station-797"
         ]
     },
     {
@@ -6450,6 +7520,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-533",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-532",
+            "station-796"
         ]
     },
     {
@@ -6468,6 +7542,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-530",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-531",
+            "station-796"
         ]
     },
     {
@@ -6486,6 +7564,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-535",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-534",
+            "station-801"
         ]
     },
     {
@@ -6504,6 +7586,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-532",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-533",
+            "station-801"
         ]
     },
     {
@@ -6522,6 +7608,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-97",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-536",
+            "station-802"
         ]
     },
     {
@@ -6540,6 +7630,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-534",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-535",
+            "station-802"
         ]
     },
     {
@@ -6666,6 +7760,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-280",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-544"
         ]
     },
     {
@@ -6684,6 +7781,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-859",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-543"
         ]
     },
     {
@@ -6702,6 +7802,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-543",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-546"
         ]
     },
     {
@@ -6720,6 +7823,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-539",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-545"
         ]
     },
     {
@@ -6806,6 +7912,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-550",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-554"
         ]
     },
     {
@@ -6860,6 +7969,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-555",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-551"
         ]
     },
     {
@@ -7000,6 +8112,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-598",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-563",
+            "station-564",
+            "station-565",
+            "station-566",
+            "station-567"
         ]
     },
     {
@@ -7018,6 +8137,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-603",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-562",
+            "station-563",
+            "station-564",
+            "station-565",
+            "station-566"
         ]
     },
     {
@@ -7036,6 +8162,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-562",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-569",
+            "station-570",
+            "station-571",
+            "station-572",
+            "station-573"
         ]
     },
     {
@@ -7054,6 +8187,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-567",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-568",
+            "station-569",
+            "station-570",
+            "station-571",
+            "station-572"
         ]
     },
     {
@@ -7072,6 +8212,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-568",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-575",
+            "station-576",
+            "station-577",
+            "station-578",
+            "station-579"
         ]
     },
     {
@@ -7090,6 +8237,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-573",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-574",
+            "station-575",
+            "station-576",
+            "station-577",
+            "station-578"
         ]
     },
     {
@@ -7108,6 +8262,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-574",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-581",
+            "station-582",
+            "station-583",
+            "station-584",
+            "station-585"
         ]
     },
     {
@@ -7126,6 +8287,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-579",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-580",
+            "station-581",
+            "station-582",
+            "station-583",
+            "station-584"
         ]
     },
     {
@@ -7144,6 +8312,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-580",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-587",
+            "station-588",
+            "station-589",
+            "station-590",
+            "station-591"
         ]
     },
     {
@@ -7162,6 +8337,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-585",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-586",
+            "station-587",
+            "station-588",
+            "station-589",
+            "station-590"
         ]
     },
     {
@@ -7180,6 +8362,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-586",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-593",
+            "station-594",
+            "station-595",
+            "station-596",
+            "station-597"
         ]
     },
     {
@@ -7198,6 +8387,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-591",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-592",
+            "station-593",
+            "station-594",
+            "station-595",
+            "station-596"
         ]
     },
     {
@@ -7216,6 +8412,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-604",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-599",
+            "station-600",
+            "station-601",
+            "station-602",
+            "station-603"
         ]
     },
     {
@@ -7234,6 +8437,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-609",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-598",
+            "station-599",
+            "station-600",
+            "station-601",
+            "station-602"
         ]
     },
     {
@@ -7248,6 +8458,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-598",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-605",
+            "station-606",
+            "station-607",
+            "station-608",
+            "station-609"
         ]
     },
     {
@@ -7266,6 +8483,13 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-610",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-604",
+            "station-605",
+            "station-606",
+            "station-607",
+            "station-608"
         ]
     },
     {
@@ -7294,6 +8518,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-615",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-612"
         ]
     },
     {
@@ -7312,6 +8539,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-616",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-611"
         ]
     },
     {
@@ -7326,6 +8556,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-623",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-614"
         ]
     },
     {
@@ -7340,6 +8573,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-624",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-613"
         ]
     },
     {
@@ -7358,6 +8594,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-617",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-616"
         ]
     },
     {
@@ -7376,6 +8615,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-618",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-615"
         ]
     },
     {
@@ -7394,6 +8636,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-619",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-618"
         ]
     },
     {
@@ -7412,6 +8657,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-620",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-617"
         ]
     },
     {
@@ -7430,6 +8678,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-621",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-620"
         ]
     },
     {
@@ -7448,6 +8699,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-622",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-619"
         ]
     },
     {
@@ -7466,6 +8720,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-623",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-622"
         ]
     },
     {
@@ -7484,6 +8741,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-624",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-621"
         ]
     },
     {
@@ -7502,6 +8762,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-613",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-624"
         ]
     },
     {
@@ -7520,6 +8783,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-614",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-623"
         ]
     },
     {
@@ -7710,6 +8976,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-643",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-637"
         ]
     },
     {
@@ -7746,6 +9015,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-641",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-635"
         ]
     },
     {
@@ -7764,6 +9036,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-644",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-639",
+            "station-640"
         ]
     },
     {
@@ -7782,6 +9058,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-645",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-638",
+            "station-640"
         ]
     },
     {
@@ -7800,6 +9080,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-646",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-638",
+            "station-639"
         ]
     },
     {
@@ -7818,6 +9102,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-638",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-642",
+            "station-643"
         ]
     },
     {
@@ -7836,6 +9124,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-639",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-641",
+            "station-643"
         ]
     },
     {
@@ -7854,6 +9146,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-640",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-641",
+            "station-642"
         ]
     },
     {
@@ -7872,6 +9168,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-216",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-645",
+            "station-646"
         ]
     },
     {
@@ -7890,6 +9190,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-217",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-644",
+            "station-646"
         ]
     },
     {
@@ -7908,6 +9212,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-218",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-644",
+            "station-645"
         ]
     },
     {
@@ -7926,6 +9234,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-665",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-649"
         ]
     },
     {
@@ -7962,6 +9273,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-725",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-647"
         ]
     },
     {
@@ -7980,6 +9294,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-677",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-412"
         ]
     },
     {
@@ -7998,6 +9315,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-759",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-652",
+            "station-653",
+            "station-654"
         ]
     },
     {
@@ -8012,6 +9334,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-365",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-651",
+            "station-653",
+            "station-654"
         ]
     },
     {
@@ -8030,6 +9357,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-760",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-651",
+            "station-652",
+            "station-654"
         ]
     },
     {
@@ -8048,6 +9380,11 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-761",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-651",
+            "station-652",
+            "station-653"
         ]
     },
     {
@@ -8066,6 +9403,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-74",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-704"
         ]
     },
     {
@@ -8084,6 +9424,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-681",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-706"
         ]
     },
     {
@@ -8102,6 +9445,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-660",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-658"
         ]
     },
     {
@@ -8120,6 +9466,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-662",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-657"
         ]
     },
     {
@@ -8156,6 +9505,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-647",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-661"
         ]
     },
     {
@@ -8174,6 +9526,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-650",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-660"
         ]
     },
     {
@@ -8246,6 +9601,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-667",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-666"
         ]
     },
     {
@@ -8264,6 +9622,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-678",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-665"
         ]
     },
     {
@@ -8282,6 +9643,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-684",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-668"
         ]
     },
     {
@@ -8300,6 +9664,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-685",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-667"
         ]
     },
     {
@@ -8318,6 +9685,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-671",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-670"
         ]
     },
     {
@@ -8336,6 +9706,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-682",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-669"
         ]
     },
     {
@@ -8354,6 +9727,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-686",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-672"
         ]
     },
     {
@@ -8372,6 +9748,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-687",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-671"
         ]
     },
     {
@@ -8390,6 +9769,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-675",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-674"
         ]
     },
     {
@@ -8408,6 +9790,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-683",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-673"
         ]
     },
     {
@@ -8426,6 +9811,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-653",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-676"
         ]
     },
     {
@@ -8444,6 +9832,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-651",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-675"
         ]
     },
     {
@@ -8494,6 +9885,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-657",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-680",
+            "station-681"
         ]
     },
     {
@@ -8512,6 +9907,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-706",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-679",
+            "station-681"
         ]
     },
     {
@@ -8530,6 +9929,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-659",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-679",
+            "station-680"
         ]
     },
     {
@@ -8584,6 +9987,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-669",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-685"
         ]
     },
     {
@@ -8602,6 +10008,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-670",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-684"
         ]
     },
     {
@@ -8620,6 +10029,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-673",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-687"
         ]
     },
     {
@@ -8638,6 +10050,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-674",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-686"
         ]
     },
     {
@@ -8872,6 +10287,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-689",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-701"
         ]
     },
     {
@@ -8890,6 +10308,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-763",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-700"
         ]
     },
     {
@@ -8908,6 +10329,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-695",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-703"
         ]
     },
     {
@@ -8926,6 +10350,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-696",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-702"
         ]
     },
     {
@@ -8944,6 +10371,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-753",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-655"
         ]
     },
     {
@@ -8962,6 +10392,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-704",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-74"
         ]
     },
     {
@@ -8980,6 +10413,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-705",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-656"
         ]
     },
     {
@@ -8998,6 +10434,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-711",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-708"
         ]
     },
     {
@@ -9016,6 +10455,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-710",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-707"
         ]
     },
     {
@@ -9034,6 +10476,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-712",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-710"
         ]
     },
     {
@@ -9052,6 +10497,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-648",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-709"
         ]
     },
     {
@@ -9260,6 +10708,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-726",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-723"
         ]
     },
     {
@@ -9278,6 +10729,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-727",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-722"
         ]
     },
     {
@@ -9472,6 +10926,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-739",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-736"
         ]
     },
     {
@@ -9490,6 +10947,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-245",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-737"
         ]
     },
     {
@@ -9508,6 +10968,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-738",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-734"
         ]
     },
     {
@@ -9526,6 +10989,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-740",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-735"
         ]
     },
     {
@@ -9544,6 +11010,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-737",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-739"
         ]
     },
     {
@@ -9562,6 +11031,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-735",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-738"
         ]
     },
     {
@@ -9726,6 +11198,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-750",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-785"
         ]
     },
     {
@@ -9744,6 +11219,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-758",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-786"
         ]
     },
     {
@@ -9762,6 +11240,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-927",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-756"
         ]
     },
     {
@@ -9780,6 +11261,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-751",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-755"
         ]
     },
     {
@@ -9798,6 +11282,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-752",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-754"
         ]
     },
     {
@@ -9816,6 +11303,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-655",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-753"
         ]
     },
     {
@@ -9834,6 +11324,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-754",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-752"
         ]
     },
     {
@@ -9852,6 +11345,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-755",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-751"
         ]
     },
     {
@@ -9870,6 +11366,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-786",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-758"
         ]
     },
     {
@@ -9888,6 +11387,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-928",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-757"
         ]
     },
     {
@@ -9902,6 +11404,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-651",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-760",
+            "station-761"
         ]
     },
     {
@@ -9916,6 +11422,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-653",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-759",
+            "station-761"
         ]
     },
     {
@@ -9930,6 +11440,10 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-654",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-759",
+            "station-760"
         ]
     },
     {
@@ -10358,6 +11872,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-205",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-749"
         ]
     },
     {
@@ -10376,6 +11893,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-785",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-750"
         ]
     },
     {
@@ -10394,6 +11914,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-119",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-808"
         ]
     },
     {
@@ -10412,6 +11935,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-114",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-807"
         ]
     },
     {
@@ -10430,6 +11956,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-811",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-810"
         ]
     },
     {
@@ -10448,6 +11977,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-808",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-809"
         ]
     },
     {
@@ -10592,6 +12124,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-820",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-819"
         ]
     },
     {
@@ -10610,6 +12145,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-285",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-818"
         ]
     },
     {
@@ -10628,6 +12166,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-822",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-821"
         ]
     },
     {
@@ -10646,6 +12187,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-819",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-820"
         ]
     },
     {
@@ -10664,6 +12208,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-824",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-823"
         ]
     },
     {
@@ -10682,6 +12229,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-821",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-822"
         ]
     },
     {
@@ -10700,6 +12250,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-830",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-825"
         ]
     },
     {
@@ -10718,6 +12271,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-823",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-824"
         ]
     },
     {
@@ -10736,6 +12292,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-284",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-827"
         ]
     },
     {
@@ -10754,6 +12313,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-283",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-826"
         ]
     },
     {
@@ -10772,6 +12334,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-840",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-829"
         ]
     },
     {
@@ -10790,6 +12355,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-831",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-828"
         ]
     },
     {
@@ -10808,6 +12376,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-828",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-831"
         ]
     },
     {
@@ -10826,6 +12397,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-825",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-830"
         ]
     },
     {
@@ -10844,6 +12418,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-842",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-833"
         ]
     },
     {
@@ -10858,6 +12435,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-835",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-832"
         ]
     },
     {
@@ -10876,6 +12456,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-832",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-835"
         ]
     },
     {
@@ -10894,6 +12477,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-833",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-834"
         ]
     },
     {
@@ -10912,6 +12498,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-834",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-837"
         ]
     },
     {
@@ -10930,6 +12519,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-835",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-836"
         ]
     },
     {
@@ -10948,6 +12540,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-836",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-839"
         ]
     },
     {
@@ -10962,6 +12557,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-837",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-838"
         ]
     },
     {
@@ -10980,6 +12578,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-919",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-841"
         ]
     },
     {
@@ -10998,6 +12599,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-829",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-840"
         ]
     },
     {
@@ -11360,6 +12964,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-867",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-863"
         ]
     },
     {
@@ -11378,6 +12985,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-869",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-862"
         ]
     },
     {
@@ -11450,6 +13060,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-875",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-868"
         ]
     },
     {
@@ -11468,6 +13081,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-876",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-867"
         ]
     },
     {
@@ -11554,6 +13170,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-882",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-874"
         ]
     },
     {
@@ -11568,6 +13187,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-883",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-873"
         ]
     },
     {
@@ -11586,6 +13208,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-877",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-876"
         ]
     },
     {
@@ -11604,6 +13229,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-878",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-875"
         ]
     },
     {
@@ -11622,6 +13250,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-879",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-878"
         ]
     },
     {
@@ -11640,6 +13271,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-880",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-877"
         ]
     },
     {
@@ -11658,6 +13292,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-881",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-880"
         ]
     },
     {
@@ -11676,6 +13313,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-1750236137800",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-879"
         ]
     },
     {
@@ -11712,6 +13352,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-873",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-883"
         ]
     },
     {
@@ -11730,6 +13373,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-874",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-882"
         ]
     },
     {
@@ -12104,6 +13750,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-903",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-905"
         ]
     },
     {
@@ -12254,6 +13903,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-757",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-928"
         ]
     },
     {
@@ -12272,6 +13924,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-756",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-927"
         ]
     },
     {
@@ -12326,6 +13981,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-434",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-932"
         ]
     },
     {
@@ -12340,6 +13998,9 @@ export const REAL_STATIONS: Station[] = [
                 "stationId": "station-364",
                 "travelTime": 3
             }
+        ],
+        "walkable": [
+            "station-931"
         ]
     },
     {
@@ -12780,4 +14441,4 @@ export const REAL_STATIONS: Station[] = [
             }
         ]
     }
-]
+];
