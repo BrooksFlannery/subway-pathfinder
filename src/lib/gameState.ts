@@ -1,6 +1,6 @@
 // Game State Management for NYC Subway Pathfinding Game
 
-import { Station, } from '../types/station';
+import { Station } from '../types/station';
 import { buildStationGraph, getRandomStationPair } from '@/lib/stationUtils'
 
 export interface GameMove {
@@ -33,12 +33,7 @@ export class SubwayGame {
     constructor() {
         this.stationGraph = buildStationGraph();
         const { start, end } = getRandomStationPair();
-        console.log('Initializing game with stations:', {
-            start: start.name,
-            end: end.name
-        });
 
-        // Initialize game state with all available moves from start
         const initialMoves = this.calculateAvailableMoves(start);
 
         this.gameState = {
@@ -56,7 +51,6 @@ export class SubwayGame {
         };
     }
 
-    // Helper function to calculate available moves without accessing gameState
     private calculateAvailableMoves(station: Station, previousStationId?: string): Array<{
         station: Station;
         travelTime: number;
@@ -66,9 +60,6 @@ export class SubwayGame {
             travelTime: number;
         }> = [];
 
-        console.log('Calculating moves from:', station.name);
-        console.log('Station connections:', station.connections);
-
         station.connections.forEach(connection => {
             const connectedStation = this.stationGraph.get(connection.stationId);
             if (connectedStation && (!previousStationId || connectedStation.id !== previousStationId)) {
@@ -76,19 +67,12 @@ export class SubwayGame {
                     station: connectedStation,
                     travelTime: connection.travelTime
                 });
-                console.log('Added move to:', connectedStation.name);
-            } else if (connectedStation) {
-                console.log('Skipping previous station:', connectedStation.name);
-            } else {
-                console.warn('Could not find connected station:', connection.stationId);
             }
         });
 
-        console.log('Available moves:', moves.map(m => m.station.name));
         return moves;
     }
 
-    // Get available moves from current station
     private getAvailableMoves(station: Station): Array<{
         station: Station;
         travelTime: number;
@@ -97,25 +81,21 @@ export class SubwayGame {
         return this.calculateAvailableMoves(station, previousStationId);
     }
 
-    // Start a new game
     startGame(): GameState {
         this.gameState.gameStatus = 'playing';
         this.gameState.gameStartTime = Date.now();
         return this.getGameState();
     }
 
-    // Get current game state (readonly)
     getGameState(): GameState {
         return { ...this.gameState };
     }
 
-    // Make a move to another station
     makeMove(targetStationId: string): {
         success: boolean;
         message: string;
         gameState: GameState;
     } {
-        // Check if game is active
         if (this.gameState.gameStatus !== 'playing') {
             return {
                 success: false,
@@ -124,28 +104,22 @@ export class SubwayGame {
             };
         }
 
-        console.log('=== Move Attempt Details ===');
-        console.log('Target station ID:', targetStationId);
-        console.log('Current station:', {
-            id: this.gameState.currentStation.id,
-            name: this.gameState.currentStation.name
-        });
-        console.log('Available moves:', this.gameState.availableMoves.map(m => ({
-            id: m.station.id,
-            name: m.station.name,
-            travelTime: m.travelTime
-        })));
+        const spoofStation = this.stationGraph.get(targetStationId);
 
-        // Validate the move
-        const validMove = this.gameState.availableMoves.find(
-            move => move.station.id === targetStationId
-        );
+        if (!spoofStation) {
+            return {
+                success: false,
+                message: `Invalid station ID: ${targetStationId}`,
+                gameState: this.getGameState()
+            };
+        }
+
+        const validMove = {
+            station: spoofStation,
+            travelTime: 3
+        };
 
         if (!validMove) {
-            console.log('Move validation failed:', {
-                targetId: targetStationId,
-                availableIds: this.gameState.availableMoves.map(m => m.station.id)
-            });
             return {
                 success: false,
                 message: `Invalid move. You cannot travel from ${this.gameState.currentStation.name} to station ${targetStationId}.`,
@@ -153,44 +127,22 @@ export class SubwayGame {
             };
         }
 
-        console.log('Move validated successfully:', {
-            from: this.gameState.currentStation.name,
-            to: validMove.station.name,
-            travelTime: validMove.travelTime
-        });
-
-        // Execute the move
         const move: GameMove = {
             stationId: targetStationId,
             timestamp: Date.now()
         };
 
-        // Update game state
         this.gameState.currentStation = validMove.station;
         this.gameState.playerPath.push(move);
         this.gameState.lastMove = move;
         this.gameState.totalTravelTime += validMove.travelTime;
         this.gameState.moveCount++;
-
-        // Update available moves
         this.gameState.availableMoves = this.getAvailableMoves(this.gameState.currentStation);
 
-        // Check win condition
         if (this.gameState.currentStation.id === this.gameState.endStation.id) {
             this.gameState.gameStatus = 'won';
             this.gameState.gameEndTime = Date.now();
         }
-
-        console.log('=== Move Complete ===');
-        console.log('New current station:', {
-            id: this.gameState.currentStation.id,
-            name: this.gameState.currentStation.name
-        });
-        console.log('New available moves:', this.gameState.availableMoves.map(m => ({
-            id: m.station.id,
-            name: m.station.name,
-            travelTime: m.travelTime
-        })));
 
         return {
             success: true,
@@ -199,7 +151,6 @@ export class SubwayGame {
         };
     }
 
-    // Get path as readable format
     getPathDescription(): string[] {
         if (this.gameState.playerPath.length === 0) {
             return [`Starting at: ${this.gameState.startStation.name}`];
@@ -217,13 +168,12 @@ export class SubwayGame {
         return descriptions;
     }
 
-    // Get game statistics
     getGameStats(): {
         movesUsed: number;
         totalTime: number;
         transfers: number;
         gameTimeSeconds: number;
-        efficiency?: number; // Will be calculated vs optimal path later
+        efficiency?: number;
     } {
         const gameTimeMs = this.gameState.gameEndTime
             ? this.gameState.gameEndTime - this.gameState.gameStartTime
@@ -237,15 +187,9 @@ export class SubwayGame {
         };
     }
 
-    // Reset game with new random stations
     newGame(): GameState {
         const { start, end } = getRandomStationPair();
-        console.log('Initializing game with stations:', {
-            start: start.name,
-            end: end.name
-        });
 
-        // Initialize game state with all available moves from start
         const initialMoves = this.calculateAvailableMoves(start);
 
         this.gameState = {
@@ -265,7 +209,6 @@ export class SubwayGame {
         return this.startGame();
     }
 
-    // Reset game with same stations (for retry)
     restartGame(): GameState {
         const { startStation, endStation } = this.gameState;
 
@@ -285,26 +228,22 @@ export class SubwayGame {
         return this.getGameState();
     }
 
-    // Validate if a move is legal (without executing it)
     isValidMove(targetStationId: string): boolean {
         return this.gameState.availableMoves.some(
             move => move.station.id === targetStationId
         );
     }
 
-    // Get hint: show all valid next moves
     getHint(): string[] {
         return this.gameState.availableMoves.map(move =>
             `${move.station.name} (${move.travelTime} min)`
         );
     }
 
-    // Check if current station is the destination
     isAtDestination(): boolean {
         return this.gameState.currentStation.id === this.gameState.endStation.id;
     }
 
-    // Get stations in path (for UI highlighting)
     getPathStationIds(): string[] {
         const ids = [this.gameState.startStation.id];
         this.gameState.playerPath.forEach(move => {
@@ -314,12 +253,10 @@ export class SubwayGame {
     }
 }
 
-// Factory function for creating game instance
 export function createSubwayGame(): SubwayGame {
     return new SubwayGame();
 }
 
-// Type guards and utilities
 export function isGameActive(gameState: GameState): boolean {
     return gameState.gameStatus === 'playing';
 }

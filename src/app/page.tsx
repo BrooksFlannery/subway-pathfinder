@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react';
 import SubwayGame from './components/SubwayGame';
 import SubwayMap from './components/SubwayMap';
 import { createSubwayGame, GameState, SubwayGame as Game } from '@/lib/gameState';
+import { clearLine } from 'readline';
 
 export default function Home() {
+  const [line, setLine] = useState<string[]>([]);
   const [gameState, setGameState] = useState<GameState | null>(null);
   const [game, setGame] = useState<Game | null>(null);
 
@@ -20,14 +22,21 @@ export default function Home() {
     initializeGame();
   }, []);
 
+  useEffect(() => {
+    console.log(line);
+  }, [line]);
+
   const handleStationClick = (stationId: string) => {
     if (!game || !gameState) return;
     if (gameState.gameStatus !== 'playing') return;
-    if (!gameState.availableMoves.some(move => move.station.id === stationId)) return;
+
+    //MUST UNCOMMENT THIS TO MAKE IT SO YOU CANT GO ANYWHERE
+    // if (!gameState.availableMoves.some(move => move.station.id === stationId)) return;
 
     const result = game.makeMove(stationId);
     if (result.success) {
       setGameState(result.gameState);
+      setLine(prev => [...prev, result.gameState.currentStation.id]);
     }
   };
 
@@ -37,6 +46,11 @@ export default function Home() {
 
   if (!gameState) {
     return <div>Loading...</div>;
+  }
+
+  function deleteLine() {
+    setLine([]);
+
   }
 
   return (
@@ -51,6 +65,8 @@ export default function Home() {
             gameState={gameState}
             onNewGame={handleNewGame}
           />
+          <button className='text-black' onClick={deleteLine}>Clear Line info</button>
+
         </div>
         {/* Right panel - Map */}
         <div className="w-2/3 p-6 overflow-hidden">

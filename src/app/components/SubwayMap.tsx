@@ -11,8 +11,8 @@ interface SubwayMapProps {
 export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps) {
 
 
-    const ZOOM_WIDTH = 750;
-    const ZOOM_HEIGHT = 750;
+    const ZOOM_WIDTH = 1000;//we should allow the users scroll wheel to affect this
+    const ZOOM_HEIGHT = 1000;
 
     const current = gameState.currentStation.coordinates;//we should be tweening the transition
     const zoomViewBox = current// i need some logic that makes sure we keep all transfer stations on screen...
@@ -42,30 +42,36 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
                             onClick={() => {
                                 if (isAvailable) {
                                     onStationClick(station.id);
+                                } else {
+                                    console.log(station.id + " IS NOT CONNECTED")
+                                    onStationClick(station.id);
                                 }
+
                             }}
                             style={{ cursor: isAvailable ? 'pointer' : 'default' }}
                         >
                             <circle
                                 cx={station.coordinates.x}
                                 cy={station.coordinates.y}
-                                r={isCurrent || isAvailable ? 5 : 0}
-                                fill={isCurrent ? '#fff' : isAvailable ? '#fff' : '#00000000'}
+                                r={isCurrent || isAvailable ? 7 : 7}
+                                fill={isCurrent ? '#000000' : isAvailable ? '#fff' : '#00000000'}
                                 stroke={isCurrent || isAvailable ? '#000000' : '#0000000'}
                                 strokeWidth={2}
                                 className="transition-all duration-200"
                             />
                             {/* keep this around for debugging later */}
-                            {/* <text
-                                x={station.coordinates.x}
-                                y={station.coordinates.y + 22}
-                                textAnchor="middle"
-                                fill="#334155"
-                                fontSize="12"
-                                className="font-medium"
-                            >
-                                {station.id}
-                            </text> */}
+                            {/* {(isCurrent || isAvailable) && (
+                                <text
+                                    x={station.coordinates.x}
+                                    y={station.coordinates.y + 22}
+                                    textAnchor="middle"
+                                    fill="#334155"
+                                    fontSize="12"
+                                    className="font-medium"
+                                >
+                                    {station.id}
+                                </text>
+                            )} */}
                         </g>
                     );
                 })}
