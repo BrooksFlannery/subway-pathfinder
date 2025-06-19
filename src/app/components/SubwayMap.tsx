@@ -1,6 +1,6 @@
 'use client';
 
-import { MOCK_STATIONS } from '@/data/stations';
+import { REAL_STATIONS } from '@/data/stations';
 import { GameState } from '@/lib/gameState';
 
 interface SubwayMapProps {
@@ -12,32 +12,17 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
     return (
         <div className="w-full h-full">
             <svg
-                viewBox="0 0 1000 1000"
+                viewBox="0 0 3000 3000"
                 className="w-full h-full"
             >
-                {/* Draw connections */}
-                {MOCK_STATIONS.map(station =>
-                    station.connections.map(connection => {
-                        const connectedStation = MOCK_STATIONS.find(s => s.id === connection.stationId);
-                        if (!connectedStation || station.id >= connectedStation.id) return null;
+                {/* Base NYC subway map image */}
+                <image href="/nyc_subway_map.svg" x={0} y={0} width={2500} height={2700} />
 
-                        return (
-                            <line
-                                key={`${station.id}-${connection.stationId}`}
-                                x1={station.coordinates.x}
-                                y1={station.coordinates.y}
-                                x2={connectedStation.coordinates.x}
-                                y2={connectedStation.coordinates.y}
-                                stroke="#94a3b8"
-                                strokeWidth="3"
-                                strokeLinecap="round"
-                            />
-                        );
-                    })
-                )}
+                {/* Draw subway lines */}
+                {/* No subway lines needed now */}
 
                 {/* Draw stations */}
-                {MOCK_STATIONS.map(station => {
+                {REAL_STATIONS.map(station => {
                     const isCurrent = station.id === gameState.currentStation.id;
                     const isAvailable = gameState.availableMoves.some(move => move.station.id === station.id);
                     const isStart = station.id === gameState.startStation.id;
