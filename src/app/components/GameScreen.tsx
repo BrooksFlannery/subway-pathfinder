@@ -1,9 +1,15 @@
 'use client';
 
-import { GameState } from '@/lib/types/types';
+import { GameManager } from '@/lib/types/types';
 import { Flag } from 'lucide-react';
 
-export default function SubwayGame({ game }: { game: GameState }) {
+export default function GameScreen({ gameManager }: { gameManager: GameManager }) {
+    if (!gameManager.game) {
+        return (
+            <div>loading spoinner erras...</div>
+        )
+    }
+
     return (
         <div className="space-y-6">
             {/* Game Info */}
@@ -11,7 +17,7 @@ export default function SubwayGame({ game }: { game: GameState }) {
                 <div className="flex items-center gap-2 bg-white px-4 py-3 rounded-lg shadow-sm">
                     <Flag className="w-5 h-5 text-green-500" />
                     <span className="font-medium text-gray-700">
-                        Destination: {game.destinationStation.name}
+                        Destination: {gameManager.game.destinationStation.name}
                     </span>
                 </div>
             </div>
@@ -19,8 +25,10 @@ export default function SubwayGame({ game }: { game: GameState }) {
             {/* Current Location */}
             <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h2 className="text-lg font-semibold text-gray-900 mb-2">Current Location</h2>
-                <p className="text-gray-700">{game.currentStation.name}</p>
+                <p className="text-gray-700">{gameManager.game.currentStation.name}</p>
             </div>
+            <button className='text-black' onClick={() => gameManager.advanceTurn()}>{"Increment Turn -->  "}</button>
+            <span className='text-black'>{gameManager.game.turnNumber}</span>
         </div>
     );
 } 

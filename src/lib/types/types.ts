@@ -1,9 +1,10 @@
-import { getRandomStationPair } from "../stationUtils";
 
 export type Train = {
     currentStation: Station;
     nextArrivalTurn: number;
     line: TrainLine;//idk if its weird to have them point at each other
+    id: string;
+    isAtStation: boolean;
 }
 
 export type TrainLine = {
@@ -29,17 +30,14 @@ export type GameState = {
     reputation: number;
     playerMode: 'station' | 'train'
     destinationStation: Station;
+    trains: Train[]
 }
 
-export function startGame() {
-    const { start, end } = getRandomStationPair()
-    const startState: GameState = {
-        turnNumber: 0,
-        currentStation: start,
-        destinationStation: end,
-        reputation: 0,
-        playerMode: 'station',
-        currentTrain: null
-    }
-    return startState
+export type GameManager = {
+    game: GameState | null;
+    makeMove: (next: Station) => void;
+    boardTrain: (train: Train) => void;
+    advanceTurn: () => void;
+    switchToTrainMode: () => void;
+    switchToStationMode: () => void;
 }
