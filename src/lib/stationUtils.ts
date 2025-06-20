@@ -1,7 +1,7 @@
-import { Station } from '../types/station';
-import { REAL_STATIONS } from '../data/realStations';
+import { REAL_STATIONS } from './data/realStations2';
+import { Station } from './types/types';
 
-// Helper function to build station graph
+//i think this is useful for fast lookups?
 export function buildStationGraph(): Map<string, Station> {
     const stationMap = new Map<string, Station>();
     REAL_STATIONS.forEach((station: Station) => {
