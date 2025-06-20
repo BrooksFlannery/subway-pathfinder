@@ -3,54 +3,22 @@
 import { useState, useEffect } from 'react';
 import SubwayGame from './components/SubwayGame';
 import SubwayMap from './components/SubwayMap';
-import { createSubwayGame, GameState, SubwayGame as Game } from '@/lib/gameState';
-import { clearLine } from 'readline';
+import { startGame, type GameState } from '@/lib/types/types';
 
 export default function Home() {
-  const [line, setLine] = useState<string[]>([]);
-  const [gameState, setGameState] = useState<GameState | null>(null);
-  const [game, setGame] = useState<Game | null>(null);
+  const [game, setGame] = useState<GameState | null>(null);
 
   const initializeGame = () => {
-    const newGame = createSubwayGame();
-    const initialState = newGame.startGame();
+    const newGame = startGame();
     setGame(newGame);
-    setGameState(initialState);
   };
 
   useEffect(() => {
     initializeGame();
   }, []);
 
-  useEffect(() => {
-    console.log(line);
-  }, [line]);
-
-  const handleStationClick = (stationId: string) => {
-    if (!game || !gameState) return;
-    if (gameState.gameStatus !== 'playing') return;
-
-    //MUST UNCOMMENT THIS TO MAKE IT SO YOU CANT GO ANYWHERE
-    // if (!gameState.availableMoves.some(move => move.station.id === stationId)) return;
-
-    const result = game.makeMove(stationId);
-    if (result.success) {
-      setGameState(result.gameState);
-      setLine(prev => [...prev, result.gameState.currentStation.id]);
-    }
-  };
-
-  const handleNewGame = () => {
-    initializeGame();
-  };
-
-  if (!gameState) {
+  if (!game) {
     return <div>Loading...</div>;
-  }
-
-  function deleteLine() {
-    setLine([]);
-
   }
 
   return (
@@ -62,17 +30,13 @@ export default function Home() {
         {/* Left panel - Game Controls */}
         <div className="w-1/3 p-6 overflow-y-auto border-r border-gray-200">
           <SubwayGame
-            gameState={gameState}
-            onNewGame={handleNewGame}
+            game={game}
           />
-          <button className='text-black' onClick={deleteLine}>Clear Line info</button>
 
         </div>
         {/* Right panel - Map */}
         <div className="w-2/3 p-6 overflow-hidden">
-          <SubwayMap
-            gameState={gameState}
-            onStationClick={handleStationClick}
+          <SubwayMap game={game}
           />
         </div>
       </div>

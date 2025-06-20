@@ -1,20 +1,15 @@
 'use client';
 
-import { REAL_STATIONS } from '@/data/realStations';
-import { GameState } from '@/lib/gameState';
+import { REAL_STATIONS } from '@/lib/data/realStations2';
+import { GameState } from '@/lib/types/types';
 
-interface SubwayMapProps {
-    gameState: GameState;
-    onStationClick: (stationId: string) => void;
-}
-
-export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps) {
+export default function SubwayMap({ game }: { game: GameState }) {
 
 
     const ZOOM_WIDTH = 1000;//we should allow the users scroll wheel to affect this
     const ZOOM_HEIGHT = 1000;
 
-    const current = gameState.currentStation.coordinates;//we should be tweening the transition
+    const current = game.currentStation.coordinates;//we should be tweening the transition
     const zoomViewBox = current// i need some logic that makes sure we keep all transfer stations on screen...
         ? `${current.x - ZOOM_WIDTH / 2} ${current.y - ZOOM_HEIGHT / 2} ${ZOOM_WIDTH} ${ZOOM_HEIGHT}`
         : "0 0 2500 2700";
@@ -31,21 +26,24 @@ export default function SubwayMap({ gameState, onStationClick }: SubwayMapProps)
 
                 {/* Draw stations */}
                 {REAL_STATIONS.map(station => {
-                    const isCurrent = station.id === gameState.currentStation.id;
-                    const isAvailable = gameState.availableMoves.some(move => move.station.id === station.id)
-                    const isStart = station.id === gameState.startStation.id;
-                    const isEnd = station.id === gameState.endStation.id;
+                    const isCurrent = station.id === game.currentStation.id;
+                    //
+                    const isAvailable = game.currentStation.walkable?.includes(station.id)
+                    // const isStart = station.id === gameState.startStation.id;
+                    // const isEnd = station.id === gameState.endStation.id;
 
                     return (
                         <g
                             key={station.id}
                             onClick={() => {
                                 if (isAvailable) {
-                                    onStationClick(station.id);
-                                } else {
-                                    console.log(station.id + " IS NOT CONNECTED")
-                                    onStationClick(station.id);
+                                    // onStationClick(station.id);
                                 }
+                                //for debugging purposes
+                                // else {
+                                //     console.log(station.id + " IS NOT CONNECTED")
+                                //     onStationClick(station.id);
+                                // }
 
                             }}
                             style={{ cursor: isAvailable ? 'pointer' : 'default' }}
