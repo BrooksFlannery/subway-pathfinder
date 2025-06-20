@@ -1,4 +1,4 @@
-import { buildLineGraph, buildStationGraph } from "@/lib/stationUtils";
+import { buildLineGraph, buildStationGraph, seedTrains } from "@/lib/stationUtils";
 import { GameManager, GameState, Station, Train, TrainLine } from "@/lib/types/types";
 import { useEffect, useMemo, useState } from "react";
 
@@ -8,6 +8,7 @@ export function useGame(): GameManager {
     const [game, setGame] = useState<GameState | null>(null);
     const [trains, setTrains] = useState<Train[]>([]);
 
+
     useEffect(() => {
         const middleVillage = stationMap.get("station-748");
         const myrtleWyckoff = stationMap.get("station-702");
@@ -15,13 +16,18 @@ export function useGame(): GameManager {
 
         if (!middleVillage || !myrtleWyckoff || !mLine) return;
 
-        const initialTrains: Train[] = [{
-            currentStation: middleVillage,
-            nextArrivalTurn: 1,
-            line: mLine,
-            id: 'train-1',
-            isAtStation: true,
-        }];
+        const initialTrains = seedTrains()
+
+
+
+
+        // const initialTrains: Train[] = [{
+        //     currentStation: middleVillage,
+        //     nextArrivalTurn: 1,
+        //     line: mLine,
+        //     id: 'train-1',
+        //     isAtStation: true,
+        // }];
 
         setGame({
             turnNumber: 0,

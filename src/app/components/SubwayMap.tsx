@@ -108,7 +108,7 @@ export default function SubwayMap({ gameManager }: { gameManager: GameManager })
                                 cy={train.currentStation.coordinates.y}
                                 r={7}
                                 fill={train.isAtStation ? '#FF0000' : "#FF69B4"}
-                            // className="transition-all duration-200"
+                                className="transition-all duration-1000"
                             />
                         </g>
                     );

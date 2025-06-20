@@ -1,6 +1,6 @@
 import { allLines } from './data/lines';
 import { REAL_STATIONS } from './data/realStations';
-import { Station, TrainLine } from './types/types';
+import { Station, Train, TrainLine } from './types/types';
 
 //i think this is useful for fast lookups?
 export function buildStationGraph(): Map<string, Station> {
@@ -32,8 +32,40 @@ export function getRandomStationPair(): { start: Station; end: Station } {
 
     return { start, end };
 }
+export function seedTrains(): Train[] {
+    const totalTrains: Train[] = []
+    let totalTrainId: number = 1
+    const minSkip = 5;
+    const maxSkip = 8;
 
-// // Get stations by borough
-// export function getStationsByBorough(borough: "Queens" | "Brooklyn" | "Manhattan" | "Staten Island" | "Bronx"): Station[] {
-//     return REAL_STATIONS.filter((station: Station) => station.borough === borough);
-// } 
+    allLines.forEach((line) => {
+        totalTrains.push(seedTrain(line, 0, totalTrainId));
+        totalTrainId++;
+
+        let currentStationIndex = 0;
+        while (currentStationIndex < line.line.length - 1) {
+            const skip = Math.floor(Math.random() * (maxSkip - minSkip + 1)) + minSkip;
+            currentStationIndex += skip;
+
+            if (currentStationIndex < line.line.length) {
+                totalTrains.push(seedTrain(line, currentStationIndex, totalTrainId));
+                totalTrainId++;
+            }
+        }
+    });
+
+    return totalTrains;
+}
+
+function seedTrain(line: TrainLine, stationIndex: number, id: number): Train {
+    const stationId = line.line[stationIndex];
+    const newTrain: Train = {
+        currentStation: REAL_STATIONS.find(station => station.id === stationId)!,
+        nextArrivalTurn: 1,
+        line: line,
+        id: `train-${id}`,
+        isAtStation: true,
+    }
+    console.log(newTrain)
+    return newTrain
+}
