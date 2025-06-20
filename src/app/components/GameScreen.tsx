@@ -1,5 +1,6 @@
 'use client';
 
+import { REAL_STATIONS } from '@/lib/data/realStations';
 import { GameManager } from '@/lib/types/types';
 import { Flag } from 'lucide-react';
 
@@ -31,6 +32,17 @@ export default function GameScreen({ gameManager }: { gameManager: GameManager }
             <span className='text-black'>{gameManager.game.turnNumber}</span>
             {gameManager.game.currentTrain &&
                 <button className='text-black' onClick={() => gameManager.exitTrain(gameManager.game?.currentTrain!)}>{"Exit Train "}</button>
+            }
+            {!gameManager.game.currentTrain && gameManager.game.currentStation.walkable &&
+                gameManager.game.currentStation.walkable.map(stationId => {
+                    const station = REAL_STATIONS.find(s => s.id === stationId);
+                    if (!station) return null;
+                    return (
+                        <button className='text-black' key={station.id} onClick={() => gameManager.makeMove(station)}>
+                            Click this button to move to {station.name}
+                        </button>
+                    );
+                })
             }
 
 
