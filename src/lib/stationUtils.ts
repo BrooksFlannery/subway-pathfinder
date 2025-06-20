@@ -1,5 +1,6 @@
-import { REAL_STATIONS } from './data/realStations2';
-import { Station } from './types/types';
+import { allLines } from './data/lines';
+import { REAL_STATIONS } from './data/realStations';
+import { Station, TrainLine } from './types/types';
 
 //i think this is useful for fast lookups?
 export function buildStationGraph(): Map<string, Station> {
@@ -8,6 +9,14 @@ export function buildStationGraph(): Map<string, Station> {
         stationMap.set(station.id, station);
     });
     return stationMap;
+}
+
+export function buildLineGraph(): Map<string, TrainLine> {
+    const lineMap = new Map<string, TrainLine>();
+    allLines.forEach((line: TrainLine) => {
+        lineMap.set(line.id, line);
+    });
+    return lineMap;
 }
 
 // Helper function to get random start/end pair
