@@ -34,7 +34,7 @@ export default function SubwayMap({ gameManager }: { gameManager: GameManager })
                 {REAL_STATIONS.map(station => {
                     const isCurrent = station.id === gameManager.game?.currentStation.id;
                     //
-                    const isAvailable = gameManager.game?.currentStation.walkable?.includes(station.id)
+                    const isAvailable = !gameManager.game?.currentTrain && gameManager.game?.currentStation.walkable?.includes(station.id)
                     // const hasTrain = game.trains.some(train => train.currentStation.id === station.id);                    
                     // const isStart = station.id === gameState.startStation.id;
                     // const isEnd = station.id === gameState.endStation.id;
@@ -44,7 +44,7 @@ export default function SubwayMap({ gameManager }: { gameManager: GameManager })
                             key={station.id}
                             onClick={() => {
                                 if (isAvailable) {
-                                    // onStationClick(station.id);
+                                    gameManager.makeMove(station);
                                 }
                                 //for debugging purposes
                                 // else {
