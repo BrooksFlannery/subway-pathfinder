@@ -36,8 +36,7 @@ export type GameState = {
 export type GameManager = {
     game: GameState | null;
     makeMove: (next: Station) => void;
+    exitTrain: (train: Train) => void;
     boardTrain: (train: Train) => void;
     advanceTurn: () => void;
-    switchToTrainMode: () => void;
-    switchToStationMode: () => void;
 }
