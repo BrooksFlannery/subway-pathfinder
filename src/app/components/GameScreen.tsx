@@ -29,6 +29,11 @@ export default function GameScreen({ gameManager }: { gameManager: GameManager }
             </div>
             <button className='text-black' onClick={() => gameManager.advanceTurn()}>{"Increment Turn -->  "}</button>
             <span className='text-black'>{gameManager.game.turnNumber}</span>
+            {gameManager.game.currentTrain &&
+                <button className='text-black' onClick={() => gameManager.exitTrain(gameManager.game?.currentTrain!)}>{"Exit Train "}</button>
+            }
+
+
         </div>
     );
 } 

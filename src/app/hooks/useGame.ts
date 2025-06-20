@@ -17,7 +17,7 @@ export function useGame(): GameManager {
 
         const initialTrains: Train[] = [{
             currentStation: middleVillage,
-            nextArrivalTurn: 3,
+            nextArrivalTurn: 1,
             line: mLine,
             id: 'train-1',
             isAtStation: true,
@@ -42,52 +42,60 @@ export function useGame(): GameManager {
     }, [game?.turnNumber]);
 
     useEffect(() => {
-        if (!game) return;
-        incrementPlayer();
-    }, [trains]);
+        setGame(prev => {
+            if (!prev) return prev;
 
-    useEffect(() => {
-        // keep the trains array inside the game state in sync so UI components relying on game.trains stay updated
-        setGame(prev => prev ? { ...prev, trains } : prev);
+            let nextState: GameState = { ...prev, trains }; // always sync trains
+
+            if (prev.currentTrain) {
+                const currentTrainId = prev.currentTrain.id;
+                const updatedTrain = trains.find(t => t.id === currentTrainId);
+                if (updatedTrain && updatedTrain.isAtStation) {
+                    nextState = {
+                        ...nextState,
+                        currentTrain: updatedTrain,
+                        currentStation: updatedTrain.currentStation,
+                    };
+                } else if (!updatedTrain || !updatedTrain.isAtStation) {
+                }
+            }
+
+            return nextState;
+        });
     }, [trains]);
 
     function incrementTrains() {
         setTrains(prevTrains =>
             prevTrains.map(train => {
                 const nextTurn = train.nextArrivalTurn - 1;
-                if (nextTurn > 0) return { ...train, nextArrivalTurn: nextTurn, isAtStation: false };
+                if (nextTurn > 0) {
+                    return { ...train, nextArrivalTurn: nextTurn, isAtStation: false };
+                }
 
                 const nextStation = getNextStationFromLine(train.currentStation, train.line);
-                if (!nextStation) return train; // need to kick off rider and reset at start of line
+                if (!nextStation) {
+                    const playerStopStation = train.currentStation;
+                    const firstStation = stationMap.get(train.line.line[0]);
+
+                    if (train === game?.currentTrain) exitTrain({ ...train, currentStation: playerStopStation });
+
+
+                    return {
+                        ...train,
+                        currentStation: firstStation!,
+                        nextArrivalTurn: 1,
+                        isAtStation: true,
+                    };
+                }
 
                 return {
                     ...train,
                     currentStation: { ...nextStation },
-                    nextArrivalTurn: 3,
+                    nextArrivalTurn: 1,
                     isAtStation: true,
                 };
             })
         );
-    }
-    function incrementPlayer() {
-        setGame(prev => {
-            if (!prev?.currentTrain) return prev;
-
-            const updatedTrain = trains.find(train => train.id === prev.currentTrain!.id);//we should prob make a trainMap as well
-            if (!updatedTrain || !updatedTrain.isAtStation) {
-                console.log('player didnt update');
-                console.log(updatedTrain);
-                return prev;
-            }
-
-            console.log('player DID update');
-
-            return {
-                ...prev,
-                currentTrain: updatedTrain,
-                currentStation: updatedTrain.currentStation
-            };
-        });
     }
 
     function getNextStationFromLine(currentStation: Station, trainLine: TrainLine): Station | null {
@@ -107,15 +115,21 @@ export function useGame(): GameManager {
     }
     function boardTrain(train: Train) {
         setGame(prev => prev ? { ...prev, currentTrain: train, playerMode: 'train' } : prev);
-        console.log('actually boarded', train.id)
+    }
+    function exitTrain(train: Train) {
+        setGame(prev => prev ? {
+            ...prev,
+            currentTrain: null,
+            playerMode: 'station',
+            currentStation: train.currentStation
+        } : prev);
     }
 
     return {
         game,
         makeMove,
+        exitTrain,
         boardTrain,
         advanceTurn,
-        switchToTrainMode: () => setGame(prev => prev ? { ...prev, playerMode: 'train' } : prev),
-        switchToStationMode: () => setGame(prev => prev ? { ...prev, playerMode: 'station' } : prev),
     };
 }
