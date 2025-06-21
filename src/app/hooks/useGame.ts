@@ -118,9 +118,11 @@ export function useGame(): GameManager {
     function makeMove(next: Station) {
         if (!game || !game.currentStation.walkable?.includes(next.id)) return;
         setGame(prev => prev ? { ...prev, currentStation: next } : prev);
+        advanceTurn();
     }
     function boardTrain(train: Train) {
         setGame(prev => prev ? { ...prev, currentTrain: train, playerMode: 'train' } : prev);
+        advanceTurn();
     }
     function exitTrain(train: Train) {
         setGame(prev => prev ? {
@@ -129,6 +131,7 @@ export function useGame(): GameManager {
             playerMode: 'station',
             currentStation: train.currentStation
         } : prev);
+        advanceTurn();
     }
 
     return {

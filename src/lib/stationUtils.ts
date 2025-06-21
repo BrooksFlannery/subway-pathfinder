@@ -69,3 +69,70 @@ function seedTrain(line: TrainLine, stationIndex: number, id: number): Train {
     console.log(newTrain)
     return newTrain
 }
+
+export type ArrivalInfo = {
+    line: TrainLine;
+    train: Train;
+    arrivalTurns: number;
+};
+
+/**
+ * Computes the upcoming arrivals for a single station given the current train positions.
+ *
+ * The algorithm walks forward along each line that services the station until it finds the
+ * next train that is currently waiting at a station (isAtStation === true).  It counts
+ * the number of turns required for that train to reach the target station:
+ *   arrivalTurns = train.nextArrivalTurn + numberOfStationsBetween(trainStation, targetStation)
+ *
+ * If no train is found after one full loop of the line, the line is ignored for now.
+ */
+export function computeArrivalsForStation(
+    station: Station,
+    trains: Train[],
+    lineMap: Map<string, TrainLine>
+): ArrivalInfo[] {
+    const arrivals: ArrivalInfo[] = [];
+
+    // Some stations might not have lines listed (edge-case data), bail early.
+    if (!station.lines || station.lines.length === 0) return arrivals;
+
+    for (const lineId of station.lines) {
+        const line = lineMap.get(lineId);
+        if (!line) continue;
+
+        const stationIdx = line.line.findIndex(id => id === station.id);
+        if (stationIdx === -1) continue; // Data inconsistency safeguard
+
+        const lineLength = line.line.length;
+
+        // Among ALL trains on this line, find the one that will reach the station soonest.
+        let best: ArrivalInfo | null = null;
+
+        for (const train of trains) {
+            if (train.line.id !== line.id || !train.isAtStation) continue;
+
+            const trainIdx = line.line.findIndex(id => id === train.currentStation.id);
+            if (trainIdx === -1) continue; // Should never happen but be safe.
+
+            // Distance along the forward direction of the line.
+            let distance: number;
+            if (trainIdx <= stationIdx) {
+                distance = stationIdx - trainIdx; // Train is behind or at station.
+            } else {
+                distance = (lineLength - trainIdx) + stationIdx; // Wrap around.
+            }
+
+            const arrivalTurns = train.nextArrivalTurn + distance;
+
+            if (!best || arrivalTurns < best.arrivalTurns) {
+                best = { line, train, arrivalTurns };
+            }
+        }
+
+        if (best) arrivals.push(best);
+    }
+
+    arrivals.sort((a, b) => a.arrivalTurns - b.arrivalTurns);
+
+    return arrivals;
+}
