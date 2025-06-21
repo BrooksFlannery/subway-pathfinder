@@ -59,8 +59,8 @@ export default function SubwayMap({ gameManager }: { gameManager: GameManager })
                                 cx={station.coordinates.x}
                                 cy={station.coordinates.y}
                                 r={isCurrent || isAvailable ? 7 : 7}
-                                fill={isCurrent ? '#000000' : isAvailable ? '#fff' : '#00000000'}
-                                stroke={isCurrent || isAvailable ? '#000000' : '#0000000'}
+                                fill={isCurrent || isAvailable ? '#fff' : '#00000000'}
+                                stroke={isCurrent ? '#000000' : '#0000000'}
                                 strokeWidth={2}
                                 className="transition-all duration-200"
                             />
